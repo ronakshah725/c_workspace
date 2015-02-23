@@ -68,10 +68,11 @@ int main()
   COORD pnt;
   pnt = *assign_val();
   printf("x=%f,y=%f,z=%f\n", pnt.x, pnt.y, pnt.z);
-  // so use '->' for accesing struct vars with a object pointer, 
+  // so use '->' for accesing struct vars with a object pointer,
   // so use '.' for accesing struct vars with a normal object,
   return 0;
 } 
+
 
 void printer(int * p , int *q){
 
