@@ -74,6 +74,10 @@ int main()
 } 
 
 
+
+
+
+
 void printer(int * p , int *q){
 
   (*p)++;
