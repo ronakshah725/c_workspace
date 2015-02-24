@@ -1,3 +1,8 @@
+/*
+Author: Ronak Shah
+Description:Self explanatory code, with the helpof comments, to explain some basic to intermediate concept of pointers
+Resource:http://www.cs.cf.ac.uk/Dave/C/node10.html
+*/
 #include <stdio.h>
 void printer(int *p, int *q);
 
