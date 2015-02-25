@@ -1,5 +1,5 @@
 /*
-Author: Ronak Shah
+Author: Ronak N Shah
 Description:Self explanatory code, with the helpof comments, to explain some basic to intermediate concept of pointers
 Resource:http://www.cs.cf.ac.uk/Dave/C/node10.html
 */
@@ -62,10 +62,8 @@ int main()
   int a=1, b=10;
   printer(&a, &b);
   printf("a=%d,b=%d\n",a,b);
-
-
-
-  /////////////////return struct//////////////////////////////////
+  printf("ronak is a %d\n", a);
+  /////////////////return struct_typedefct//////////////////////////////////
   //check out the struct and the function assign_val() at the top.
   //
   COORD *point; // declares a pointer of type COORD
