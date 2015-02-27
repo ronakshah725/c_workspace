@@ -1,0 +1,83 @@
+#######################Source : http://lldb.llvm.org/lldb-gdb.html  ########################################
+ctrl-f '***' :imp ones
+
+//basic
+1.compile with -g option :
+$cc test.c -g test
+
+2.run the debugger :
+$lldb test(debugger for mac : lldb)
+
+        2.1-Attach to a process named "a.out":
+        (lldb) process attach --name a.out
+        (lldb) pro at -n a.out
+
+///breakpoints
+***
+3.set breakpoint at function 'abc'' :
+$b abc
+
+***
+4.Set a breakpoint in file test.c at line 12 :
+$b test.c:12
+
+5*.Set a conditional breakpoint :
+$br s -n foo -c '(int)strcmp(y,"hello") == 0'
+
+***
+6.List all breakpoints:
+$(lldb) breakpoint list
+$(lldb) br l
+
+7.Delete a breakpoint.
+$(lldb) breakpoint delete 1
+$(lldb) br del 1
+
+
+//run and step
+8.Run  :
+$r
+
+9.source level single step in the currently selected thread.
+$(lldb) step
+$(lldb) s
+
+10.source level single step over in the currently selected thread.
+$(lldb) next
+$(lldb) n
+
+
+//Examining variables frame for local, target for class or static or global variable(open to controversy)
+
+***
+11.Show the arguments and local variables for the current frame:
+$(lldb) frame variable
+$(lldb) fr v
+
+***
+12.show local variables for the current frame:
+(lldb) frame variable --no-args
+(lldb) fr v -a
+
+***
+13.Show the contents of local variable "bar":
+(lldb) frame variable bar
+(lldb) fr v bar
+(lldb) p bar
+
+14.Show the contents of local variable "bar" formatted as hex
+(lldb) frame variable --format x bar
+(lldb) fr v -f x bar
+
+15.Show the global/static variables defined in the current source file:
+(lldb) target variable
+(lldb) ta v
+
+
+
+
+***
+//WATCHPOINT COMMANDS.
+16.Set a watchpoint on a variable when it is written to.
+$(lldb) watchpoint set variable global_var
+$(lldb) wa s v global_var
